@@ -18,6 +18,7 @@ module.exports = {
     ]
   },
   env: {
+    ELASTICPATH_CLIENT_ID: process.env.ELASTICPATH_CLIENT_ID,
     // expose env to the browser
     BUILDER_PUBLIC_KEY: process.env.BUILDER_PUBLIC_KEY,
   },
