@@ -13,9 +13,9 @@ import Head from 'next/head'
 import { resolveBuilderContent } from '@lib/resolve-builder-content'
 
 builder.init(builderConfig.apiKey)
-import { useThemeUI } from '@theme-ui/core'
+import { useThemeUI } from 'theme-ui'
 import { Link } from '@components/ui'
-import { Themed } from '@theme-ui/mdx'
+import { Themed } from 'theme-ui'
 import { getLayoutProps } from '@lib/get-layout-props'
 
 const isProduction = process.env.NODE_ENV === 'production'
@@ -32,13 +32,14 @@ export async function getStaticProps({
     : { urlPath }
 
   const page = await resolveBuilderContent('page',targeting)
-
+  const { theme } = await getLayoutProps();
+  console.log(' themeloco ...path static ', theme);
   return {
     props: {
       page,
       targeting,
       locale: locale || null,
-      ...(await getLayoutProps()),
+      theme,
     },
     // Next.js will attempt to re-generate the page:
     // - When a request comes in
@@ -62,7 +63,8 @@ export default function Path({
   locale,
 }: InferGetStaticPropsType<typeof getStaticProps>) {
   const router = useRouter()
-  const { theme } = useThemeUI()
+  const ts = useThemeUI();
+  console.log(' in path theme is ', ts);
   if (router.isFallback) {
     return <h1>Loading...</h1>
   }
@@ -107,7 +109,7 @@ export default function Path({
       <BuilderComponent
         options={{ includeRefs: true } as any}
         model="page"
-        data={{ theme, targeting }}
+        data={{ theme: ts.theme, targeting }}
         renderLink={(props: any) => {
           // nextjs link doesn't handle hash links well if it's on the same page (starts with #)
           if (props.target === '_blank' || props.href?.startsWith('#')) {
