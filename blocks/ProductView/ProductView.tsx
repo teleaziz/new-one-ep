@@ -1,13 +1,13 @@
 /** @jsxRuntime classic */
 /** @jsx jsx */
 import React, { useMemo, useState, useEffect } from 'react'
-import { Themed, jsx } from 'theme-ui'
-import { Grid, Button } from '@theme-ui/components'
+import { Themed, jsx, useThemeUI } from 'theme-ui'
+import { Grid, Button } from 'theme-ui'
 import { NextSeo } from 'next-seo'
-import { useUI } from '@components/ui/context'
-import { ImageCarousel, LoadingDots } from '@components/ui'
+import { useUI } from '../../components/ui/context'
+import { ImageCarousel, LoadingDots } from '../../components/ui'
 import ProductLoader from './ProductLoader'
-import { BuilderContent } from '@builder.io/react'
+import builder, { Builder, BuilderContent } from '@builder.io/react'
 const clone = (o: any) => JSON.parse(JSON.stringify(o))
 
 interface Props {
@@ -22,7 +22,7 @@ interface Props {
 const ProductBox: React.FC<Props> = ({
   product,
   renderSeo = true,
-  description = product.description,
+  description: descriptionInput,
   title = product.title,
 }) => {
   const [loading, setLoading] = useState(false)
@@ -30,26 +30,24 @@ const ProductBox: React.FC<Props> = ({
 
   const [variant, setVariant] = useState({})
 
+  const ts = useThemeUI();
+
   const addToCart = async () => {
-    setLoading(true)
-    try {
-      openSidebar()
-      setLoading(false)
-    } catch (err) {
-      setLoading(false)
-    }
+    openSidebar()
   }
+
+  const isLive = ( builder.editingModel || builder.previewingModel ) !== 'product-images'
 
   return (
     <React.Fragment>
       {renderSeo && (
         <NextSeo
           title={title}
-          description={description}
+          description={product.description}
           openGraph={{
             type: 'website',
             title: title,
-            description: description,
+            description: product.description,
             // images: [
             //   {
             //     url: product.images?.[0]?.src!,
@@ -62,6 +60,7 @@ const ProductBox: React.FC<Props> = ({
         />
       )}
       <BuilderContent
+        key={product.id}
         model="product-images"
         content={clone(product.builderImagesResponse)}
         options={{
@@ -73,7 +72,7 @@ const ProductBox: React.FC<Props> = ({
         {(data) => {
           const enrichedProduct = {
             ...product,
-            ...data,
+            ... isLive ? product.builderImagesResponse.data : data,
           }
 
           return (
@@ -111,7 +110,7 @@ const ProductBox: React.FC<Props> = ({
                 </span>
                 <div
                   dangerouslySetInnerHTML={{
-                    __html: enrichedProduct.description!,
+                    __html: descriptionInput || enrichedProduct.description!,
                   }}
                 />
                 <div>
@@ -120,7 +119,7 @@ const ProductBox: React.FC<Props> = ({
                 <Button
                   name="add-to-cart"
                   disabled={loading}
-                  sx={{ margin: 2, display: 'block' }}
+                  sx={{ margin: 2, display: 'block' , bg: ts.theme.colors?.primary}}
                   onClick={addToCart}
                 >
                   Add to Cart {loading && <LoadingDots />}

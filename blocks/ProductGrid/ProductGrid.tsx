@@ -3,7 +3,7 @@
 import { jsx } from 'theme-ui'
 import { FC, useEffect, useState } from 'react'
 import { LoadingDots } from '@components/ui'
-import { Grid } from '@theme-ui/components'
+import { Grid } from 'theme-ui'
 import { ProductCardProps } from '@components/common/ProductCard'
 import { ProductCardDemo, ProductCard } from '@components/common'
 
