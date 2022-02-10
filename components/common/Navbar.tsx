@@ -18,16 +18,13 @@ const Navbar: FC = () => {
     async function fetchContent() {
       const anouncementContent = await builder
         .get('announcement-bar', {
-          cachebust: true,
-          userAttributes: {
-            ...builder.userAttributesChanged.value
-          }
+          cacheSeconds: 20,
         })
         .toPromise()
       setAnnouncement(anouncementContent)
     }
     fetchContent()
-  }, [])
+  }, [builder.userAttributesChanged.value])
 
   return (
     <React.Fragment>
