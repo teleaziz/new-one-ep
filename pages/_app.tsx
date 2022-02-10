@@ -20,6 +20,7 @@ builder.init(builderConfig.apiKey)
 
 import '../blocks/ProductGrid/ProductGrid.builder'
 import '../blocks/ProductView/ProductView.builder'
+import { Layout } from '@components/common'
 
 Builder.register('insertMenu', {
   name: 'Shopify Products Components',
@@ -33,18 +34,15 @@ Builder.register('insertMenu', {
 const Noop: FC = ({ children }) => <>{children}</>
 
 export default function MyApp({ Component, pageProps }: AppProps) {
-  const Layout = (Component as any).Layout || Noop
   useEffect(() => {
-    initUserAttributes(pageProps.targeting || Cookies.get())
+    initUserAttributes(Cookies.get())
   }, [])
 
   return (
-    <>
       <Layout pageProps={pageProps}>
         <Component {...pageProps} />
+        <AsyncConfigurator />
       </Layout>
-      <AsyncConfigurator />
-    </>
   )
 }
 
