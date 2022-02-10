@@ -1,7 +1,7 @@
 /** @jsxRuntime classic */
 /** @jsx jsx */
 import { Themed, jsx } from 'theme-ui'
-import { Card, Text } from '@theme-ui/components'
+import { Card, Text } from 'theme-ui'
 import { Link, ImageCarousel } from '@components/ui'
 import React from 'react'
 
@@ -67,7 +67,7 @@ const ProductCard: React.FC<ProductCardProps> = ({
         </div>
         <div sx={{ textAlign: 'center' }}>
           <Themed.h2 sx={{ mt: 4, mb: 0, fontSize: 14 }}>
-            {enrichedProduct.title}
+            {enrichedProduct.title || enrichedProduct.name}
           </Themed.h2>
           <Text sx={{ fontSize: 12, mb: 2 }}>{price}</Text>
         </div>
