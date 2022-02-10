@@ -18,7 +18,10 @@ const Navbar: FC = () => {
     async function fetchContent() {
       const anouncementContent = await builder
         .get('announcement-bar', {
-          cachebust: env.isDev,
+          cachebust: true,
+          userAttributes: {
+            ...builder.userAttributesChanged.value
+          }
         })
         .toPromise()
       setAnnouncement(anouncementContent)
@@ -44,6 +47,8 @@ const Navbar: FC = () => {
           justifyContent: 'space-between',
           alignItems: 'center',
           position: 'relative',
+          bg: theme.colors?.background,
+          color: theme.colors?.text
         }}
       >
         <Themed.div
