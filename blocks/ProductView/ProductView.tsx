@@ -23,7 +23,7 @@ const ProductBox: React.FC<Props> = ({
   product,
   renderSeo = true,
   description: descriptionInput,
-  title = product.title,
+  title = product.title || product.name,
 }) => {
   const [loading, setLoading] = useState(false)
   const { openSidebar } = useUI()
