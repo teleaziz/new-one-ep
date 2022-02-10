@@ -72,7 +72,7 @@ const ProductBox: React.FC<Props> = ({
         {(data) => {
           const enrichedProduct = {
             ...product,
-            ... isLive ? product.builderImagesResponse.data : data,
+            ... isLive ? product.builderImagesResponse?.data : data,
           }
 
           return (
