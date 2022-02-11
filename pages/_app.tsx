@@ -23,11 +23,10 @@ import '../blocks/ProductView/ProductView.builder'
 import { Layout } from '@components/common'
 
 Builder.register('insertMenu', {
-  name: 'Shopify Products Components',
+  name: 'Elasticpath Products Components',
   items: [
     { name: 'ProductGrid' },
     { name: 'ProductBox' },
-    { name: 'ProductView' },
   ],
 })
 
