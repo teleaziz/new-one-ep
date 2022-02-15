@@ -8,14 +8,19 @@ export async function resolveBuilderContent(
   modelName: string,
   targetingAttributes?: any
 ) {
+
+  const locale = targetingAttributes?.locale || 'en-US';
   let page = await builder
     .get(modelName, {
       userAttributes: targetingAttributes,
       includeRefs: true,
-      noTraverse: false,
-      preview: modelName,
       cachebust: true,
-    } as any)
+      options: {
+        data: {
+          locale
+        }
+      }
+    })
     .toPromise()
 
   if (page) {
