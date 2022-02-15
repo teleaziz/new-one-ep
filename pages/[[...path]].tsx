@@ -33,7 +33,6 @@ export async function getStaticProps({
 
   const page = await resolveBuilderContent('page',targeting)
   const { theme } = await getLayoutProps();
-  console.log(' themeloco ...path static ', theme);
   return {
     props: {
       page,
@@ -64,7 +63,6 @@ export default function Path({
 }: InferGetStaticPropsType<typeof getStaticProps>) {
   const router = useRouter()
   const ts = useThemeUI();
-  console.log(' in path theme is ', ts);
   if (router.isFallback) {
     return <h1>Loading...</h1>
   }
@@ -79,6 +77,11 @@ export default function Path({
         {Builder.isBrowser && <DefaultErrorPage statusCode={404} />}
       </>
     )
+  }
+
+  if (Builder.isBrowser) {
+    console.log(' here page is ', page);
+    console.log(' here page state is ', page?.data?.state?.article, page?.data?.state?.locale)  
   }
 
   const { title, description, image } = page?.data! || {}
