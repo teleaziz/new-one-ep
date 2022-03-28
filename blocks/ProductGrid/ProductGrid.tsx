@@ -35,7 +35,7 @@ export const ProductGrid: FC<ProductGridProps> = ({
 
   useEffect(() => {
     const getProducts = async () => {
-      setLoading(true)
+      setLoading(!products.length)
       const promises = productsList!
         .map((entry) => entry.product)
         .filter((handle: string | undefined) => typeof handle === 'string')
