@@ -37,7 +37,7 @@ export async function getStaticProps({
     props: {
       page,
       targeting,
-      locale: locale || null,
+      locale: targeting?.locale || 'en-US',
       theme,
     },
     // Next.js will attempt to re-generate the page:
