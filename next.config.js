@@ -3,6 +3,10 @@ module.exports = {
   images: {
     domains: ['cdn.builder.io'],
   },
+  webpack: (config) => {
+    config.externals = (config.externals || []).concat('vm2');
+    return config;
+  },
   async headers() {
     return [
       {

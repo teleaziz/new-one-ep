@@ -22,6 +22,15 @@ import '../blocks/ProductGrid/ProductGrid.builder'
 import '../blocks/ProductView/ProductView.builder'
 import { Layout } from '@components/common'
 
+
+if (!Builder.isBrowser) {
+  try {
+    require('vm2');
+  } catch(e) {
+    console.log(e)
+  }
+}
+
 Builder.register('insertMenu', {
   name: 'Elasticpath Products Components',
   items: [
