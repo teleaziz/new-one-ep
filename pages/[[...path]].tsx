@@ -110,7 +110,6 @@ export default function Path({
         />
       )}
       <BuilderComponent
-        options={{ includeRefs: true } as any}
         model="page"
         context={{ locale }}
         data={{ theme: ts.theme, targeting, locale }}
