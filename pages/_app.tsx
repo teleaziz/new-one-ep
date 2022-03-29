@@ -51,6 +51,7 @@ export default function MyApp({ Component, pageProps }: AppProps) {
     Object.keys(rest).forEach((key) => {
       Cookies.set(`builder.userAttributes.${key}`, String(rest[key]));
     })
+    console.log('here editing ', builder.editingModel, Builder.previewingModel, Builder.isEditing, Builder.isPreviewing)
     if (Builder.isEditing || Builder.isPreviewing) {
       location.reload();
     }
