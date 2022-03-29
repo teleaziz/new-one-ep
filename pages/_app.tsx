@@ -51,6 +51,9 @@ export default function MyApp({ Component, pageProps }: AppProps) {
     Object.keys(rest).forEach((key) => {
       Cookies.set(`builder.userAttributes.${key}`, String(rest[key]));
     })
+    if (Builder.isEditing || Builder.isPreviewing) {
+      location.reload();
+    }
   }, [builder.userAttributesChanged.value])
 
   return (
