@@ -46,6 +46,13 @@ export default function MyApp({ Component, pageProps }: AppProps) {
     initUserAttributes(Cookies.get())
   }, [])
 
+  useEffect(() => {
+    const { urlPath, ...rest} = builder.getUserAttributes();
+    Object.keys(rest).forEach((key) => {
+      Cookies.set(`builder.userAttributes.${key}`, String(rest[key]));
+    })
+  }, [builder.userAttributesChanged.value])
+
   return (
       <Layout pageProps={pageProps}>
         <Component {...pageProps} />
