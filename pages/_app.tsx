@@ -47,13 +47,24 @@ export default function MyApp({ Component, pageProps }: AppProps) {
   }, [])
 
   useEffect(() => {
-    const { urlPath, ...rest} = builder.getUserAttributes();
+    const { urlPath, date, ...rest } = builder.getUserAttributes();
+    let changed = false;
     Object.keys(rest).forEach((key) => {
-      Cookies.set(`builder.userAttributes.${key}`, String(rest[key]));
+      const cookie = `builder.userAttributes.${key}`;
+      const value = String(rest[key]);
+      const valueInCookie = Cookies.get(cookie);
+      if (valueInCookie !== value) {
+        Cookies.set(cookie, value, {
+          sameSite: 'None',
+          // TODO , isDev (localhost)
+          secure: true,
+        });
+        changed = true;
+      }
     })
-    console.log('here editing ', builder.editingModel, Builder.previewingModel, Builder.isEditing, Builder.isPreviewing)
-    if (Builder.isEditing || Builder.isPreviewing) {
-      location.reload();
+    if (changed) {
+      // in studio tab
+      setTimeout(() => location.reload(), 0);
     }
   }, [builder.userAttributesChanged.value])
 
