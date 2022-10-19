@@ -36,6 +36,7 @@ restrictedRegister(
       {
         name: 'description',
         richText: true,
+        localized: true,
         type: 'html',
         helperText: 'Override product description from shopify',
       },
