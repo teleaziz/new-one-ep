@@ -1,6 +1,7 @@
 import dynamic from 'next/dynamic'
 import { Builder } from '@builder.io/react'
 import { Input } from '@builder.io/sdk'
+import { JSONProps } from './jsonProps'
 const LazyProductGrid = dynamic(async () => {
   return (await import('./ProductGrid')).ProductGrid
 })
@@ -103,4 +104,27 @@ Builder.registerComponent(LazyProductGrid, {
       ],
     },
   ].concat(productGridSchema(true)),
+})
+
+
+Builder.registerComponent(JSONProps, {
+  name: 'FoldedExperiment',
+  image: 'https://unpkg.com/css.gg@2.0.0/icons/svg/play-list-add.svg',
+  description: 'Folded test description',
+  inputs: [
+    {
+      name: 'HugeObject',
+      type: 'object',
+      folded: true,
+      keysHelperText: 'Pick a property to edit',
+      helperText: 'edit this enormouse size object',
+      subFields: new Array(40).map((_, index) => {
+        return {
+          type: 'text',
+          name: `prop${index}`,
+          helperText: `the helper text of prop ${index}`,
+        }
+      })
+    },
+  ] as any
 })
