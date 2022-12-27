@@ -120,7 +120,8 @@ Builder.registerComponent(JSONProps, {
       helperText: 'edit this enormouse size object',
       subFields: Array.from({ length: 30 }).map((_, index) => {
         return {
-          type: 'text',
+          type: index % 2 === 0 ? 'text' : 'file',
+          allowedFileTypes: ['jpeg', 'jpg', 'png', 'svg'],
           name: `prop${index}`,
           helperText: `the helper text of prop ${index}`,
         }
