@@ -38,9 +38,13 @@ const productCardFields: Input[] = [
   },
 ]
 
-export const productGridSchema: Input[] = [
+export const productGridSchema = (folded: boolean): any[] => ([
   {
     name: 'cardProps',
+    ...folded && {
+      folded: true,
+      keysHelperText: 'pick the property you want to edit'
+    },
     defaultValue: {
       imgPriority: true,
       imgLayout: 'responsive',
@@ -62,7 +66,7 @@ export const productGridSchema: Input[] = [
     type: 'number',
     defaultValue: 9,
   },
-]
+])
 
 Builder.registerComponent(LazyProductGrid, {
   name: 'ProductGrid',
@@ -79,5 +83,24 @@ Builder.registerComponent(LazyProductGrid, {
         },
       ],
     },
-  ].concat(productGridSchema as any),
+  ].concat(productGridSchema(false)),
+})
+
+
+Builder.registerComponent(LazyProductGrid, {
+  name: 'ProductGridFolded',
+  image: 'https://unpkg.com/css.gg@2.0.0/icons/svg/play-list-add.svg',
+  description: 'Folded test description',
+  inputs: [
+    {
+      name: 'productsList',
+      type: 'list',
+      subFields: [
+        {
+          name: 'product',
+          type: `ElasticpathProductHandle`,
+        },
+      ],
+    },
+  ].concat(productGridSchema(true)),
 })
