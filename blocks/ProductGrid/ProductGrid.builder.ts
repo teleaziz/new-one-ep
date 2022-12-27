@@ -118,7 +118,7 @@ Builder.registerComponent(JSONProps, {
       folded: true,
       keysHelperText: 'Pick a property to edit',
       helperText: 'edit this enormouse size object',
-      subFields: new Array(40).map((_, index) => {
+      subFields: Array.from({ length: 30 }).map((_, index) => {
         return {
           type: 'text',
           name: `prop${index}`,
