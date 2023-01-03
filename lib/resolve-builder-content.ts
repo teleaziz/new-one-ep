@@ -15,8 +15,8 @@ export async function resolveBuilderContent(
       userAttributes: targetingAttributes,
       includeRefs: true,
       cachebust: true,
-      locale,
       options: {
+        locale,
         data: {
           // pass here, will be state.locale on our servers, we will resolve content from contentful using that locale
           locale,
