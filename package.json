@@ -45,7 +45,7 @@
   },
   "dependencies": {
     "@builder.io/personalization-utils": "0.0.7",
-    "@builder.io/react": "^2.0.12",
+    "@builder.io/react": "^2.0.12-1",
     "@builder.io/utils": "^1.0.4",
     "@builder.io/widgets": "^1.2.23",
     "@reach/portal": "^0.11.2",

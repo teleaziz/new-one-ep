@@ -1158,10 +1158,10 @@
     "js-cookie" "^3.0.1"
     "prettier" "^2.4.1"
 
-"@builder.io/react@^2.0.12", "@builder.io/react@>=1.1.0":
-  "integrity" "sha512-Tk3JdhISOOccTxApjgqL710lyJsdBP07b9VJt+xBXQDl7R0e6OUSRljg8uuIfCAjN9Fs1AJ7tAP1JPwoGuBqhw=="
-  "resolved" "https://registry.npmjs.org/@builder.io/react/-/react-2.0.12.tgz"
-  "version" "2.0.12"
+"@builder.io/react@^2.0.12-1", "@builder.io/react@>=1.1.0":
+  "integrity" "sha512-TfizlNjJu5nPtIaOibbjrKGyW42n3zek9Q+QThutzNsrCRWF9yIhSYQatd9GF6gVWX77K7ifYNO8NKC5J2a/vw=="
+  "resolved" "https://registry.npmjs.org/@builder.io/react/-/react-2.0.12-1.tgz"
+  "version" "2.0.12-1"
   dependencies:
     "@builder.io/sdk" "^1.1.30"
     "@emotion/core" "^10.0.17"
