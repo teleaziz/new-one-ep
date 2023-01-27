@@ -113,6 +113,20 @@ Builder.registerComponent(JSONProps, {
   description: 'Folded test description',
   inputs: [
     {
+      name: 'Ref',
+      type: 'reference'
+    },
+    {
+      name: 'refList',
+      type: 'list',
+      subFields: [
+        {
+          name: 'ref',
+          type: `reference`,
+        },
+      ],
+    },
+    {
       name: 'HugeObject',
       type: 'object',
       folded: true,
