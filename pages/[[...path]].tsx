@@ -112,6 +112,7 @@ export default function Path({
       <BuilderComponent
         model="page"
         locale={locale}
+        options={{ includeRefs: true}}
         data={{ theme: ts.theme, targeting }}
         renderLink={(props: any) => {
           // nextjs link doesn't handle hash links well if it's on the same page (starts with #)
