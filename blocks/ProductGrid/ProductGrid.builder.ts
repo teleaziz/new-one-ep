@@ -117,6 +117,10 @@ Builder.registerComponent(JSONProps, {
       type: 'reference'
     },
     {
+      name: 'color',
+      type: 'color'
+    },
+    {
       name: 'refList',
       type: 'list',
       subFields: [
