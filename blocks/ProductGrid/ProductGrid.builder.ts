@@ -121,6 +121,11 @@ Builder.registerComponent(JSONProps, {
       type: 'color'
     },
     {
+      name: 'localizedText',
+      type: 'text',
+      localized: true,
+    },
+    {
       name: 'refList',
       type: 'list',
       subFields: [
