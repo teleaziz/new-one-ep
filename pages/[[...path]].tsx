@@ -6,7 +6,7 @@ import type {
 import { NextSeo } from 'next-seo'
 import { useRouter } from 'next/router'
 import { Layout } from '@components/common'
-import { BuilderComponent, Builder, builder } from '@builder.io/react'
+import { BuilderComponent, Builder, builder, useIsPreviewing } from '@builder.io/react'
 import builderConfig from '@config/builder'
 import DefaultErrorPage from 'next/error'
 import Head from 'next/head'
@@ -63,6 +63,7 @@ export default function Path({
 }: InferGetStaticPropsType<typeof getStaticProps>) {
   const router = useRouter()
   const ts = useThemeUI();
+  const isPreviewing = useIsPreviewing();
   if (router.isFallback) {
     return <h1>Loading...</h1>
   }
@@ -111,7 +112,7 @@ export default function Path({
       )}
       <BuilderComponent
         model="page"
-        locale={locale}
+        locale={isPreviewing ? 'Default' : locale }
         options={{ includeRefs: true}}
         data={{ theme: ts.theme, targeting }}
         renderLink={(props: any) => {
