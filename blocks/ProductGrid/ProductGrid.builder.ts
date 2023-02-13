@@ -140,6 +140,19 @@ Builder.registerComponent(JSONProps, {
       ],
     },
     {
+      name: 'regularObject',
+      type: 'object',
+      helperText: 'edit this',
+      subFields: Array.from({ length: 4 }).map((_, index) => {
+        return {
+          type: index % 2 === 0 ? 'text' : 'file',
+          allowedFileTypes: ['jpeg', 'jpg', 'png', 'svg'],
+          name: `prop${index}`,
+          helperText: `the helper text of prop ${index}`,
+        }
+      })
+    },
+    {
       name: 'HugeObject',
       type: 'object',
       folded: true,
@@ -154,5 +167,5 @@ Builder.registerComponent(JSONProps, {
         }
       })
     },
-  ] as any
+  ] as any,
 })
