@@ -15,7 +15,7 @@ module.exports = {
           // this will allow site to be framed under builder.io for wysiwyg editing
           {
             key: 'Content-Security-Policy',
-            value: 'frame-ancestors https://*.builder.io https://builder.io',
+            value: 'frame-ancestors https://*.builder.io https://builder.io http://localhost:1234',
           },
         ],
       },
