@@ -1130,6 +1130,23 @@
   "resolved" "https://registry.npmjs.org/@bcoe/v8-coverage/-/v8-coverage-0.2.3.tgz"
   "version" "0.2.3"
 
+"@builder.io/admin-sdk@^0.0.5":
+  "integrity" "sha512-BhZHKoql0EUc3ZDMXbOEfeW8X+kjbEZ3c9/tV45rmXx+kk42eoNv09d9KARu9iB8MK6vgyvjeX6u5+XJxcLOJA=="
+  "resolved" "https://registry.npmjs.org/@builder.io/admin-sdk/-/admin-sdk-0.0.5.tgz"
+  "version" "0.0.5"
+  dependencies:
+    "@types/traverse" "^0.6.32"
+    "chalk" "^4.1.0"
+    "clear" "^0.1.0"
+    "cli-progress" "^3.8.2"
+    "commander" "^2.20.3"
+    "figlet" "^1.5.0"
+    "fs-extra" "^9.0.1"
+    "graphql-typed-client" "^1.7.4"
+    "lodash" "^4.17.20"
+    "node-fetch" "^2.6.1"
+    "traverse" "^0.6.6"
+
 "@builder.io/admin-sdk@0.0.4-0":
   "integrity" "sha512-swD5sNQi8AjOEZKU6MHXL9Y12S6tImtqO1JcjAAfm74DV6pYW0HrleW2cV86yLegp9pZdNEn4PikarAEiUZ2Og=="
   "resolved" "https://registry.npmjs.org/@builder.io/admin-sdk/-/admin-sdk-0.0.4-0.tgz"
