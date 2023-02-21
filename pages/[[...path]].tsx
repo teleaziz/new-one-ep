@@ -112,7 +112,7 @@ export default function Path({
       )}
       <BuilderComponent
         model="page"
-        locale={isPreviewing ? 'Default' : locale }
+        locale={locale}
         options={{ includeRefs: true}}
         data={{ theme: ts.theme, targeting }}
         renderLink={(props: any) => {
