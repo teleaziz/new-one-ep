@@ -140,6 +140,12 @@ Builder.registerComponent(JSONProps, {
       ],
     },
     {
+          name: 'localizedLongText',
+          type: 'longText',
+          defaultValue: 'Hello World',
+          localized: true,
+    },
+    {
       name: 'regularObject',
       type: 'object',
       helperText: 'edit this',
