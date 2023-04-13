@@ -25,6 +25,7 @@ const theme = {
 const A: any = JSONTree
 
 export const JSONProps: any = (props: any) => {
+  console.log(' here props.localizedText is ' , props.localizedText);
   return (
     <div>
         <A theme={theme} data={props}></A>
