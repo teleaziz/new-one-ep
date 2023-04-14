@@ -177,7 +177,7 @@ Builder.registerComponent(JSONProps, {
 })
 
 
-cons a: any =  [
+const a: any =  [
       {
         name: 'gridCTA',
         type: 'object',
