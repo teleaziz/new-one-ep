@@ -189,7 +189,6 @@ const a: any =  [
       {
         name: 'gridCTA',
         type: 'object',
-        advanced: true,
         defaultValue: {
           fontVariant: 'condensedVipHomepageFamily',
         },
