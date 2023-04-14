@@ -178,6 +178,14 @@ Builder.registerComponent(JSONProps, {
 
 
 const a: any =  [
+    {
+      name: 'Ref',
+      type: 'reference'
+    },
+    {
+      name: 'color',
+      type: 'color'
+    },
       {
         name: 'gridCTA',
         type: 'object',
