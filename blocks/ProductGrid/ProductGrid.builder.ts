@@ -175,3 +175,40 @@ Builder.registerComponent(JSONProps, {
     },
   ] as any,
 })
+
+
+cons a: any =  [
+      {
+        name: 'gridCTA',
+        type: 'object',
+        defaultValue: {
+          fontVariant: 'condensedVipHomepageFamily',
+        },
+        subFields: [
+          {
+            name: 'fontVariant',
+            type: 'string',
+            enum: ['condensedVipHomepageFamily'],
+            hideFromUI: true,
+          },
+          {
+            name: 'label',
+            type: 'string',
+            localized: true,
+          },
+          {
+            name: 'url',
+            type: 'string',
+            localized: true,
+          },
+        ],
+      }
+    ];
+
+
+Builder.registerComponent(JSONProps, {
+  name: 'BugRepro',
+  image: 'https://unpkg.com/css.gg@2.0.0/icons/svg/box.svg',
+  description: 'bug temp',
+  inputs: a 
+});
