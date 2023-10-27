@@ -178,6 +178,11 @@ Builder.registerComponent(JSONProps, {
 
 
 const a: any =  [
+  {
+    type: 'tags',
+    name: 'tags',
+    defaultValue: ['A', 'B']
+  },
     {
       name: 'Ref',
       type: 'reference'
