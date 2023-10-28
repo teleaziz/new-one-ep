@@ -115,7 +115,7 @@ Builder.registerComponent(JSONProps, {
     {
       type: 'Tags',
       name: 'stringsArray',
-      defaultValue: ['foo', 'bar]
+      defaultValue: ['foo', 'bar']
     },
     {
       name: 'Ref',
