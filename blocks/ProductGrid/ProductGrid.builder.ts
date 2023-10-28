@@ -113,6 +113,11 @@ Builder.registerComponent(JSONProps, {
   description: 'Folded test description',
   inputs: [
     {
+      type: 'Tags',
+      name: 'stringsArray',
+      defaultValue: ['foo', 'bar]
+    },
+    {
       name: 'Ref',
       type: 'reference'
     },
