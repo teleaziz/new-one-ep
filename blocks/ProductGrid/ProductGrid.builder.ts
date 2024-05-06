@@ -181,6 +181,40 @@ Builder.registerComponent(JSONProps, {
   ] as any,
 })
 
+Builder.registerComponent(JSONProps, {
+  name: 'ListLocalizationText',
+  image: 'https://unpkg.com/css.gg@2.0.0/icons/svg/play-list-remove.svg',
+  description: 'Folded test description',
+  inputs: [
+    {
+			name: 'favoriteTechStack',
+			type: 'list',
+			defaultValue: [
+				{
+					name: 'Svelte',
+					description: 'A compiler for building user interfaces.'
+				}
+			],
+			localized: true,
+			subFields: [
+				{
+					name: 'name',
+					type: 'text',
+					defaultValue: 'Svelte',
+					localized: true
+				},
+				{
+					name: 'description',
+					type: 'text',
+					defaultValue: 'A compiler for building user interfaces.',
+					localized: true
+				}
+			]
+		}
+  ] as any,
+})
+
+
 
 const a: any =  [
   {
