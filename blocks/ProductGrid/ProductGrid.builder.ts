@@ -213,6 +213,32 @@ Builder.registerComponent(JSONProps, {
 		}
   ] as any,
 })
+Builder.registerComponent(JSONProps, {
+  name: 'DefaultLocalized',
+  image: 'https://unpkg.com/css.gg@2.0.0/icons/svg/play-list-remove.svg',
+  description: 'Folded test description',
+  inputs: [
+    {
+      name: 'aaa',
+      type: 'text',
+      localized: true,
+      defaultValue: 'AAA Optional Eyebrow',
+    },
+    {
+      name: 'eyebrow',
+      type: 'text',
+      localized: true,
+      defaultValue: 'Optional Eyebrow',
+    },
+    {
+      name: 'headline',
+      type: 'text',
+      localized: true,
+      defaultValue: 'Powerful for developers Fast for everyone',
+    },
+  ] as any,
+})
+
 
 
 
