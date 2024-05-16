@@ -225,6 +225,18 @@ Builder.registerComponent(JSONProps, {
       defaultValue: 'AAA Optional Eyebrow',
     },
     {
+      name: 'num',
+      type: 'number',
+      localized: true,
+      defaultValue: 23,
+    },
+   {
+      name: 'zeroDefault',
+      type: 'number',
+      localized: true,
+      defaultValue: 0,
+    },
+    {
       name: 'eyebrow',
       type: 'text',
       localized: true,
