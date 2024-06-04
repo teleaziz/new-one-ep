@@ -149,6 +149,7 @@ Builder.registerComponent(JSONProps, {
           type: 'longText',
           defaultValue: 'Hello World',
           localized: true,
+	  required: true
     },
     {
       name: 'regularObject',
