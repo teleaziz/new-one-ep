@@ -77,6 +77,7 @@ Builder.registerComponent(LazyProductGrid, {
     {
       name: 'productsList',
       type: 'list',
+      nameField: 'product',
       subFields: [
         {
           name: 'product',
@@ -96,6 +97,7 @@ Builder.registerComponent(LazyProductGrid, {
     {
       name: 'productsList',
       type: 'list',
+      nameField: 'product',
       subFields: [
         {
           name: 'product',
@@ -190,7 +192,6 @@ Builder.registerComponent(JSONProps, {
     {
 			name: 'favoriteTechStack',
 			type: 'list',
-	                nameField: 'name',
 			defaultValue: [
 				{
 					name: 'Svelte',
