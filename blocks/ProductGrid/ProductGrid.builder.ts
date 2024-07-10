@@ -190,6 +190,7 @@ Builder.registerComponent(JSONProps, {
     {
 			name: 'favoriteTechStack',
 			type: 'list',
+	                nameField: 'name',
 			defaultValue: [
 				{
 					name: 'Svelte',
