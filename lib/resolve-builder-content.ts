@@ -13,9 +13,9 @@ export async function resolveBuilderContent(
   let page = await builder
     .get(modelName, {
       userAttributes: targetingAttributes,
-      includeRefs: true,
       cachebust: true,
       options: {
+        enrich: true,
         locale,
         data: {
           // pass here, will be state.locale on our servers, we will resolve content from contentful using that locale
