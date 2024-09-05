@@ -6,6 +6,12 @@ import Document, {
   DocumentContext,
 } from 'next/document'
 import cheerio from 'cheerio'
+// import ivm from 'isolated-vm'
+// import { Builder } from '@builder.io/react'
+
+// const isolate = new ivm.Isolate({ memoryLimit: 128 });
+// const context = isolate.createContextSync();
+// Builder.setServerContext(context);
 
 /**
  * See this issue for more details https://github.com/emotion-js/emotion/issues/2040
