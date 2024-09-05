@@ -397,10 +397,10 @@
     js-cookie "^3.0.1"
     prettier "^2.4.1"
 
-"@builder.io/react@^5.0.2-2":
-  version "5.0.2-2"
-  resolved "https://registry.npmjs.org/@builder.io/react/-/react-5.0.2-2.tgz"
-  integrity sha512-G2XKIU7GOo+E99Zbn/sOSZhiUztonU75Acdhqyr244A3MHUcUudgknNRPlkdc90IfH50S0O8EuGmixfyehsWGg==
+"@builder.io/react@5.0.2-4":
+  version "5.0.2-4"
+  resolved "https://registry.yarnpkg.com/@builder.io/react/-/react-5.0.2-4.tgz#c83fb71074b4b9e2cc12fa282a8f9d38aacb0db6"
+  integrity sha512-oD86nbLv/Vix1XwdBceUnUyLclguQeImmTQhHuDwewU1JQyEbLb6Sbl3Cb1FrXwwu4sOlwkY4Q8i0UtQUMcvbQ==
   dependencies:
     "@builder.io/sdk" "3.0.2-0"
     "@emotion/core" "^10.0.17"
@@ -5121,14 +5121,7 @@ isobject@^3.0.0, isobject@^3.0.1:
   resolved "https://registry.npmjs.org/isobject/-/isobject-3.0.1.tgz"
   integrity sha1-TkMekrEalzFjaqH5yNHMvP2reN8=
 
-isolated-vm@^5.0.0:
-  version "5.0.1"
-  resolved "https://registry.npmjs.org/isolated-vm/-/isolated-vm-5.0.1.tgz"
-  integrity sha512-hs7+ff59Z2zDvavfcjuot/r1gm6Bmpt+GoZxmVfxUmXaX5scOvUq/Rnme+mUtSh5lW41hH8gAuvk/yTJDYO8Fg==
-  dependencies:
-    prebuild-install "^7.1.1"
-
-isolated-vm@^5.0.1:
+isolated-vm@^5.0.0, isolated-vm@^5.0.1:
   version "5.0.1"
   resolved "https://registry.yarnpkg.com/isolated-vm/-/isolated-vm-5.0.1.tgz#d87b12cf8889e351cb1598a4aeea00bb458bf20c"
   integrity sha512-hs7+ff59Z2zDvavfcjuot/r1gm6Bmpt+GoZxmVfxUmXaX5scOvUq/Rnme+mUtSh5lW41hH8gAuvk/yTJDYO8Fg==
