@@ -3,7 +3,7 @@ import { getPersonalizedRewrite } from '@builder.io/personalization-utils/dist/g
 
 
 export default function middleware(request) {
-  const excludededPrefixes = ['/favicon', '/api', '/product', '/sw.js', '/site.webmanifest', '/icon-192x192.png', '/preview/']
+  const excludededPrefixes = ['/favicon', '/api', '/product', '/sw.js', '/site.webmanifest', '/icon-192x192.png', '/preview/', '/worker.js']
   const url = request.nextUrl
   let response = NextResponse.next()
   if (!excludededPrefixes.find((path) => url.pathname?.startsWith(path))) {
