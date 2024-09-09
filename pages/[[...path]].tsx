@@ -80,12 +80,8 @@ export default function Path({
     )
   }
 
-  if (Builder.isBrowser) {
-    console.log(' here page is ', page);
-    console.log(' here page state is ', page?.data?.state?.article, page?.data?.state?.locale)  
-  }
-
   const { title, description, image } = page?.data! || {}
+  console.log('targeting', targeting);
   builder.setUserAttributes(targeting);
   return (
     <div>
