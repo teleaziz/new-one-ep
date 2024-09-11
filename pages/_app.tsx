@@ -31,6 +31,9 @@ Builder.register('insertMenu', {
 })
 
 const Noop: FC = ({ children }) => <>{children}</>
+
+console.log(' HERE cookie name', Builder.attributesCookieName);
+
 Builder.attributesCookieName = 'builder.targetingAttributes';
 
 export default function MyApp({ Component, pageProps }: AppProps) {
