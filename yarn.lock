@@ -411,7 +411,7 @@
     node-fetch "^2.6.1"
     prop-types "^15.7.2"
 
-"@builder.io/sdk@3.0.2-1":
+"@builder.io/sdk@3.0.2-1", "@builder.io/sdk@^3.0.2-1":
   version "3.0.2-1"
   resolved "https://registry.yarnpkg.com/@builder.io/sdk/-/sdk-3.0.2-1.tgz#e2be99c3803022e47344b1667cd4b977ba092c47"
   integrity sha512-I9GFiIg4BIfJnMCF4XDLY+hVddox/mIMwYGK0n2vSTF3bg7Z+v6nu2OxI600CbsshBTTrdju7CIMRhGdAiJaiQ==
