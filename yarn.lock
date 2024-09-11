@@ -397,10 +397,10 @@
     js-cookie "^3.0.1"
     prettier "^2.4.1"
 
-"@builder.io/react@^5.0.2-10":
-  version "5.0.2-10"
-  resolved "https://registry.yarnpkg.com/@builder.io/react/-/react-5.0.2-10.tgz#c64a3c60a6f2093a74870eb10cc6ad6937d9e00d"
-  integrity sha512-/vvkBz2p8pSXUr1OHjvqkKP/uP4QC6gjaZoroKwMhfWaqH9u2J4GjHED0nnB0Xiuxiy5UD1tmxau0lljqzqXVQ==
+"@builder.io/react@^5.0.2-11":
+  version "5.0.2-11"
+  resolved "https://registry.yarnpkg.com/@builder.io/react/-/react-5.0.2-11.tgz#107c37f0d69fcf22363b51f672f85bd69aebf03c"
+  integrity sha512-kMQTdvMTM7PrqSCfYv1YWVdANZNLzl9wXUSBWueyIQ42BIlmpjkP2sRli60Gl9McGS5Fe5iMBZm6CV8Q6YK3cw==
   dependencies:
     "@builder.io/sdk" "3.0.2-0"
     "@emotion/core" "^10.0.17"
