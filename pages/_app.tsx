@@ -34,7 +34,9 @@ const Noop: FC = ({ children }) => <>{children}</>
 
 export default function MyApp({ Component, pageProps }: AppProps) {
   useEffect(() => {
-    initUserAttributes(Cookies.get())
+    const record = Cookies.get();
+    delete record['builder.userAttributes'];
+    initUserAttributes(record);
   }, [])
 
   useEffect(() => {

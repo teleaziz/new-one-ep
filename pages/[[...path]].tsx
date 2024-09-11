@@ -81,8 +81,6 @@ export default function Path({
   }
 
   const { title, description, image } = page?.data! || {}
-  console.log('targeting', targeting);
-  builder.setUserAttributes(targeting);
   return (
     <div>
       {title && (
