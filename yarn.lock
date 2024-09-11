@@ -397,12 +397,12 @@
     js-cookie "^3.0.1"
     prettier "^2.4.1"
 
-"@builder.io/react@^5.0.2-17":
-  version "5.0.2-17"
-  resolved "https://registry.yarnpkg.com/@builder.io/react/-/react-5.0.2-17.tgz#36294281ea3d41afacb2a05795add75607578f51"
-  integrity sha512-ytCFcFTqn7YqkoZnTEBfOKn2MzXTTKOCWZ6JG8AXxhLTLUzU+DT/2rNEb1FzmNwN4fzpNGdms2eHNw0yvRXsRg==
+"@builder.io/react@^5.0.2-18":
+  version "5.0.2-18"
+  resolved "https://registry.yarnpkg.com/@builder.io/react/-/react-5.0.2-18.tgz#6cfaf521c2f85d377f65b2f0df6ab55de3156cb6"
+  integrity sha512-Z9IyMFkdHNEwOr9XiYhUcBvkfHrBBw2rl/PF0XumfyTdYUWZ+GqD7+4vwh01bt1wt4D2S0NhnnLnBrZsJG/fZg==
   dependencies:
-    "@builder.io/sdk" "3.0.2-0"
+    "@builder.io/sdk" "3.0.2-1"
     "@emotion/core" "^10.0.17"
     hash-sum "^2.0.0"
     isolated-vm "^5.0.0"
@@ -411,10 +411,10 @@
     node-fetch "^2.6.1"
     prop-types "^15.7.2"
 
-"@builder.io/sdk@3.0.2-0":
-  version "3.0.2-0"
-  resolved "https://registry.npmjs.org/@builder.io/sdk/-/sdk-3.0.2-0.tgz"
-  integrity sha512-hFfxrRpy1IvlHA37+EK8dE825OqcxeizP2YPta3K1Pyig4aysjQ8A2JrVEif2GrunwsMzFpRnFYj5Qi0mMmQEA==
+"@builder.io/sdk@3.0.2-1":
+  version "3.0.2-1"
+  resolved "https://registry.yarnpkg.com/@builder.io/sdk/-/sdk-3.0.2-1.tgz#e2be99c3803022e47344b1667cd4b977ba092c47"
+  integrity sha512-I9GFiIg4BIfJnMCF4XDLY+hVddox/mIMwYGK0n2vSTF3bg7Z+v6nu2OxI600CbsshBTTrdju7CIMRhGdAiJaiQ==
   dependencies:
     hash-sum "^2.0.0"
     node-fetch "^2.3.0"
