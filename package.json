@@ -46,7 +46,7 @@
   "dependencies": {
     "@builder.io/admin-sdk": "^0.0.5",
     "@builder.io/personalization-utils": "0.0.7",
-    "@builder.io/react": "^5.0.2-18",
+    "@builder.io/react": "^5.0.2-20",
     "@builder.io/sdk": "^3.0.2-1",
     "@builder.io/utils": "^1.0.4",
     "@builder.io/widgets": "^1.2.23",
