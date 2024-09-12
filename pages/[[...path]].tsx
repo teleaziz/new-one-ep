@@ -61,12 +61,7 @@ export default function Path({
   targeting,
   locale,
 }: InferGetStaticPropsType<typeof getStaticProps>) {
-  const router = useRouter()
   const ts = useThemeUI();
-  const isPreviewing = useIsPreviewing();
-  if (router.isFallback) {
-    return <h1>Loading...</h1>
-  }
   // This includes setting the noindex header because static files always return a status 200 but the rendered not found page page should obviously not be indexed
   if (!page && !Builder.isEditing && !Builder.isPreviewing) {
     return (
