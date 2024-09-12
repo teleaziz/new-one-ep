@@ -52,7 +52,7 @@ import { getTargetingValues } from '@builder.io/personalization-utils'
 export async function getStaticPaths() {
   return {
     paths: [],
-    fallback: true,
+    fallback: 'blocking',
   }
 }
 
