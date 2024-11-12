@@ -160,7 +160,7 @@ Builder.registerComponent(JSONProps, {
       subFields: Array.from({ length: 4 }).map((_, index) => {
         return {
           type: index % 2 === 0 ? 'text' : 'file',
-          allowedFileTypes: ['jpeg', 'jpg', 'png', 'svg', 'mp4],
+          allowedFileTypes: ['jpeg', 'jpg', 'png', 'svg', 'mp4'],
           name: `prop${index}`,
           helperText: `the helper text of prop ${index}`,
         }
@@ -175,7 +175,7 @@ Builder.registerComponent(JSONProps, {
       subFields: Array.from({ length: 30 }).map((_, index) => {
         return {
           type: index % 2 === 0 ? 'text' : 'file',
-          allowedFileTypes: ['jpeg', 'jpg', 'png', 'svg'],
+          allowedFileTypes: ['jpeg', 'jpg', 'png', 'svg', 'mp4'],
           name: `prop${index}`,
           helperText: `the helper text of prop ${index}`,
         }
