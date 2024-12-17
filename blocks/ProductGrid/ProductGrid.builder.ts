@@ -325,3 +325,4 @@ Builder.registerComponent(JSONProps, {
       ],
     }
   ],
+});
