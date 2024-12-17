@@ -305,3 +305,23 @@ Builder.registerComponent(JSONProps, {
   description: 'bug temp',
   inputs: a 
 });
+
+Builder.registerComponent(JSONProps, {
+  name: "Counter",
+  inputs: [
+    {
+      name: "Title",
+      type: "text",
+
+    },
+    {
+      type: "list",
+      name: "textList",
+      subFields: [
+        {
+          name: "Text",
+          type: "richText",
+        },
+      ],
+    }
+  ],
